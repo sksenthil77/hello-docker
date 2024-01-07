@@ -12,6 +12,8 @@ spec:
       labels:
         app: nodeapp-sk
     spec:
+      nodeSelector:
+        "kubernetes.io/os": linux  #this is important if you are building it from MAC /Windows to Linux
       containers:
       - name: nodeserver
         image: arctictern/aksdemodocker:latest  #Docker hub location, where I have published the image
