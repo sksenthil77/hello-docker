@@ -1,4 +1,5 @@
 FROM node:alpine
-COPY . /app
 WORKDIR /app
-CMD  node app.js
+COPY app.js /app/app.js
+EXPOSE 3000
+##CMD ["node", "app.js"]
