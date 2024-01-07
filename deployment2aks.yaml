@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: arctictern/aksdemodocker:latest  #Docker hub repo, where I have published the image
+        image: arctictern/aksdemodocker:latest  #Docker hub location, where I have published the image
         ports:
         - containerPort: 3000
