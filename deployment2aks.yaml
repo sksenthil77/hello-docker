@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapp-sk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeapp-sk
+  template:
+    metadata:
+      labels:
+        app: nodeapp-sk
+    spec:
+      containers:
+      - name: nodeserver
+        image: arctictern/aksdemodocker:latest
+        ports:
+        - containerPort: 3000
